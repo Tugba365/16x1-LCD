@@ -1,14 +1,14 @@
 
-#include <LiquidCrystal.h>
+#include <LiquidCrystal.h> //Add library
 
-int yes = 8;
+int yes = 8;  //button meanings
 int no = 9;
 
-int yesStatus;
+int yesStatus; 
 int noStatus;
 
 
-const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;  //LCD pins
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 
@@ -19,7 +19,7 @@ void setup() {
   lcd.begin(8, 2);
   lcd.print("hello there");
   
-  for (int positionCounter = 0; positionCounter < 16; positionCounter++) {
+  for (int positionCounter = 0; positionCounter < 16; positionCounter++) {  //to scroll writing
       lcd.scrollDisplayLeft();
         delay(350);}
          lcd.clear();
